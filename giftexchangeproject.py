@@ -10,5 +10,15 @@ list1 = people_list()
 list1 = list1.split(',')
 
 exchange = {}
+taken = []
 for name in list1:
-    exchange[name] = random.choice(list1)
+    print(f"Name: {name}")
+    print(f"List1: {list1}")
+    recipient = random.choice(list1)
+    if (recipient == name) or (recipient in taken):
+        recipient = random.choice(list1)
+    print(f"Recipient: {recipient}")
+    exchange[name] = recipient
+    print(f"Exchange: {exchange}")
+    taken.append(recipient)
+    print(f"Taken: {taken}")
