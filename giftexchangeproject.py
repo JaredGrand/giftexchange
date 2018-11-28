@@ -31,7 +31,7 @@ def draw_names(names):
 
 def results(drawing):
     for key in drawing:
-        print(f"{key} has {drawing[key]}.")
+        print(f"\n{key} has {drawing[key]}.")
 
 def final():
     names = people_list()
