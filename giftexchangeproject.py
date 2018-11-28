@@ -30,3 +30,7 @@ def draw_names(names):
         exchange[name] = recipient
         taken.append(recipient)
     return exchange
+
+def results(drawing):
+    for key in drawing:
+        print(f"{key} has {drawing[key]}")
