@@ -7,12 +7,14 @@ def people_list():
     return input(str1)
 
 list1 = people_list()
-list1 = list1.split(',')
-newlist = []
 
-for name in list1:
-    name = name.strip()
-    newlist.append(name)
+def format_list(somelist):
+    somelist = somelist.split(',')
+    newlist = []
+    for name in somelist:
+        name = name.strip()
+        newlist.append(name)
+    return newlist
 
 
 exchange = {}
