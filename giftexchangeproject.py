@@ -6,8 +6,6 @@ def people_list():
     str1 = "Please list the names of the participants separated by commas: "
     return input(str1)
 
-list1 = people_list()
-
 def format_list(somelist):
     somelist = somelist.split(',')
     newlist = []
@@ -35,3 +33,11 @@ def draw_names(names):
 def results(drawing):
     for key in drawing:
         print(f"{key} has {drawing[key]}.")
+
+def final():
+    names = people_list()
+    exchange = draw_names(names)
+    results(exchange)
+
+if __name__ == '__main__':
+    final()
