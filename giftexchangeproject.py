@@ -33,4 +33,4 @@ def draw_names(names):
 
 def results(drawing):
     for key in drawing:
-        print(f"{key} has {drawing[key]}")
+        print(f"{key} has {drawing[key]}.")
