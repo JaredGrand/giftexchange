@@ -8,17 +8,23 @@ def people_list():
 
 list1 = people_list()
 list1 = list1.split(',')
+newlist = []
+
+for name in list1:
+    name = name.strip()
+    newlist.append(name)
+
 
 exchange = {}
 taken = []
-for name in list1:
-    print(f"Name: {name}")
-    print(f"List1: {list1}")
-    recipient = random.choice(list1)
-    if (recipient == name) or (recipient in taken):
-        recipient = random.choice(list1)
-    print(f"Recipient: {recipient}")
+for name in newlist:
+    # print(f"Name: {name}")
+    # print(f"List1: {list1}")
+    recipient = random.choice(newlist)
+    while recipient == name or recipient in taken:
+        recipient = random.choice(newlist)
+    # print(f"Recipient: {recipient}")
     exchange[name] = recipient
-    print(f"Exchange: {exchange}")
+    # print(f"Exchange: {exchange}")
     taken.append(recipient)
-    print(f"Taken: {taken}")
+    # print(f"Taken: {taken}")
