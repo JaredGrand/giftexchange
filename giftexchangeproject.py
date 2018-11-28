@@ -16,17 +16,18 @@ def format_list(somelist):
         newlist.append(name)
     return newlist
 
-
-exchange = {}
-taken = []
-for name in newlist:
-    # print(f"Name: {name}")
-    # print(f"List1: {list1}")
-    recipient = random.choice(newlist)
-    while recipient == name or recipient in taken:
+def draw_names(newlist):
+    exchange = {}
+    taken = []
+    for name in newlist:
+        # print(f"Name: {name}")
+        # print(f"List1: {list1}")
         recipient = random.choice(newlist)
-    # print(f"Recipient: {recipient}")
-    exchange[name] = recipient
-    # print(f"Exchange: {exchange}")
-    taken.append(recipient)
-    # print(f"Taken: {taken}")
+        while recipient == name or recipient in taken:
+            recipient = random.choice(newlist)
+        # print(f"Recipient: {recipient}")
+        exchange[name] = recipient
+        # print(f"Exchange: {exchange}")
+        taken.append(recipient)
+        # print(f"Taken: {taken}")
+    return exchange
