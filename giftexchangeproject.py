@@ -22,7 +22,11 @@ def draw_names(names):
     for name in names:
         recipient = random.choice(names)
         while recipient == name or recipient in taken:
-            recipient = random.choice(names)
+            if (len(names) - len(taken)) == 1:
+                print("One person was left to draw and only their name was left! Please try again.")
+                break
+            else:
+                recipient = random.choice(names)
         exchange[name] = recipient
         taken.append(recipient)
     return exchange
