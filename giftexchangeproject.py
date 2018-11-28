@@ -20,14 +20,9 @@ def draw_names(names):
     exchange = {}
     taken = []
     for name in names:
-        # print(f"Name: {name}")
-        # print(f"List1: {list1}")
         recipient = random.choice(names)
         while recipient == name or recipient in taken:
             recipient = random.choice(names)
-        # print(f"Recipient: {recipient}")
         exchange[name] = recipient
-        # print(f"Exchange: {exchange}")
         taken.append(recipient)
-        # print(f"Taken: {taken}")
     return exchange
