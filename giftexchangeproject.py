@@ -17,6 +17,7 @@ def format_list(somelist):
     return newlist
 
 def draw_names(names):
+    names = format_list(names)
     exchange = {}
     taken = []
     for name in names:
